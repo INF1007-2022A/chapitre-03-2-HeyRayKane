@@ -91,7 +91,7 @@ if u == 0:
 new_value = f"{digit_letters[v]}{digit_letters[z]}{digit_letters[x]}"
 print(new_value)"""
 
-digit_letters = "01"
+"""digit_letters = "01"
 value = 0#en décimal
 base = 2
 x = value%base # donne 0
@@ -106,4 +106,18 @@ if u == 0:
 	v=1
 
 new_value = f"{digit_letters[v]}{digit_letters[z]}{digit_letters[x]}"
+print(new_value)"""
+
+digits_letters = "0123456789ABCDEF"
+value = 123 #en décimal
+base=16
+
+x = value%base # x=2
+y = value-x # y=9
+new_value = digits_letters[x] #new_value = "2"
+while y >= base:
+    y = y//base # y=3
+    w= y%base # w=0
+    if w<base:
+        new_value = digits_letters[w]+new_value #new_value = "02"
 print(new_value)
