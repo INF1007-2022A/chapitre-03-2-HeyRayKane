@@ -1,7 +1,8 @@
 #!/usr/bin/env python
+import math
 
 
-def dissipated_power(voltage, resistance):
+"""def dissipated_power(voltage, resistance):
 	# TODO: Calculer la puissance dissipée par la résistance.
 	puissance = (voltage ** 2)/resistance
 	return puissance
@@ -64,3 +65,45 @@ if __name__ == "__main__":
 	print(average([1, 4, -2, 10]))
 	print(bills(137))
 	print(format_base(-42, 16, "0123456789ABCDEF"))
+
+def format_base(value, base, digit_letters):"""
+
+"""digit_letters = "01"
+value = 3 #(en décimal)
+base=2
+x = value%base
+y = value - value%base
+new_value = f"{digit_letters[y-1]}{digit_letters[x-1]}"
+print(new_value)"""
+
+"""digit_letters = "01"
+value = 5#en décimal
+base = 2
+x = value%base # donne 1
+y= value-x #donne 4
+z=y%(base**2) #donne 0
+w= y-z #donne 4
+v=w%(base**3) #donne 4
+u=w-v #donne 0
+if u == 0:
+	v=1
+
+new_value = f"{digit_letters[v]}{digit_letters[z]}{digit_letters[x]}"
+print(new_value)"""
+
+digit_letters = "01"
+value = 0#en décimal
+base = 2
+x = value%base # donne 0
+y= value-x #donne 6
+z=y%(base**2) #donne 2
+w= y-z #donne 4
+if z != 0:
+	z=1
+v=w%(base**3) #donne 4
+u=w-v #donne 0
+if u == 0:
+	v=1
+
+new_value = f"{digit_letters[v]}{digit_letters[z]}{digit_letters[x]}"
+print(new_value)
